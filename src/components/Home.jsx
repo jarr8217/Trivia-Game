@@ -4,19 +4,19 @@ function Home({onStart}) {
     // State to store form data and error message
     const [formData, setFormData] = useState({
         name: '', 
-        category: ''
-    });
+        category: '',
+    })};
     const [error, setError] = useState('');
 
     //Function to update form data when input changes are made
     const handleChange = (e) => {
-        fetFormData({
+        fetchFormData({
             ...formData,
-            [e.target.name]: e.target.value;
+            [e.target.name]: e.target.value
         });
 
         // Function to handle form submission
-        const handleSubmit = (e) => {
+        const handleSubmit = async (e) => {
             e.preventDefault();
 
             // Required fields validation
@@ -24,7 +24,12 @@ function Home({onStart}) {
                 setError('All fields are required');
                 return;
             }
-            try { await onStart(formData);
+            try { 
+                await onStart({
+                    name: formData.name,
+                    category: formData.category,
+                    difficulty: formData.difficulty,
+                });
                 } catch (err)
                 {
                 console.error(err);
