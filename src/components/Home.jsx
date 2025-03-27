@@ -1,16 +1,43 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 function Home({onStart}) {
     // State to store form data and error message
     const [formData, setFormData] = useState({
         name: '', 
         category: '',
-    })};
+        difficulty: ''
+    });
     const [error, setError] = useState('');
+    const [categories, setCategories] = useState([]);
+    const [difficultyLevels, setDifficultyLevels] = useState([
+        { id: 'easy', name: 'Easy' },
+        { id: 'medium', name: 'Medium' },
+        { id: 'hard', name: 'Hard' },
+    ]);
+
+    // Fetch categories from the API
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const response = await fetch('https://opentdb.com/api.php?amount=5&category=<CATEGORY_ID>&difficulty=<DIFFICULTY_LEVEL> &type=multiple');
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch');
+                }
+
+                const data = await response.json();
+                setCategories(data.trivia_categories);
+            } catch (err) {
+                console.error(err);
+                setError('Failed to fetch categories');
+            }
+        };
+
+        fetchCategories();
 
     //Function to update form data when input changes are made
     const handleChange = (e) => {
-        fetchFormData({
+        setFormData({
             ...formData,
             [e.target.name]: e.target.value
         });
@@ -69,6 +96,8 @@ function Home({onStart}) {
         </form>
     );
 }
+}
+)}
 
 export default Home;
 

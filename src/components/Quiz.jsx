@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './Quiz.css';  // Add a custom CSS file for styling
+import styles from '../styles/Quiz.module.css';  // Add a custom CSS file for styling
 
 function Quiz({ category, difficulty, name, onFinish }) {
     const [questions, setQuestions] = useState([]);
