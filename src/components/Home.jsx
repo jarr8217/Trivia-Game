@@ -19,7 +19,7 @@ function Home({onStart}) {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await fetch('https://opentdb.com/api.php?amount=5&category=<CATEGORY_ID>&difficulty=<DIFFICULTY_LEVEL> &type=multiple');
+                const response = await fetch('https://opentdb.com/api_category.php');
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch');
@@ -65,11 +65,11 @@ function Home({onStart}) {
         };
 
         return (
-        <form>
+        
             <div>
                 <h1> Welcome to the Trivia game app!</h1>
                 <p> Enter your name, select category, and choose difficulty level to start the game.</p>
-                <form onSubmit={handleSubmit}/>
+                <form onSubmit={handleSubmit}>
                     <input type='text' name='name' placeholder='Enter your name' value={formData.name} onChange={handleChange}/>
 
                 {/* Dropdown menu to select category from API response data*/ }
@@ -92,8 +92,9 @@ function Home({onStart}) {
                 {/* Start quiz button */}
                 <button type='submit'>Start Quiz</button>
                 {error && <p>{error}</p>}
-            </div>
-        </form>
+                
+            </form>
+        </div>
     );
 }
 }

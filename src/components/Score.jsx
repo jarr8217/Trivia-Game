@@ -1,5 +1,7 @@
 import React from 'react'
 
+import '../styles/Score.css'
+
 function Score ({ score, name, onRestart }) {
     return (
         <div>
@@ -11,3 +13,5 @@ function Score ({ score, name, onRestart }) {
         </div>
     )
 }
+
+export default Score
