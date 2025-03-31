@@ -1,41 +1,34 @@
-// This is the main application component for the Trivia Game.
-// It manages the overall state and renders different components based on the app's state.
-
 import { useState } from 'react';
 import './App.css';
 import Home from './components/Home';
 import Quiz from './components/Quiz';
-import Score from './components/Score';
 
 function App() {
-  // State to store the quiz data
+  // State to manage quiz data and visibility
   const [quizData, setQuizData] = useState(null);
-
-  // State to track whether the quiz is currently active
   const [showQuiz, setShowQuiz] = useState(false);
 
-  // Function to start the quiz with the provided settings
-  const StartQuiz = (name, category, difficulty) => {
-    setQuizData({ name, category, difficulty }); // Store name, category, and difficulty
+  // Start the quiz with user inputs
+  const startQuiz = (name, category, difficulty) => {
+    setQuizData({ name, category, difficulty });
     setShowQuiz(true);
   };
 
-  // Function to reset the quiz and return to the home screen
+  // Reset the quiz to show the home screen
   const resetQuiz = () => {
     setQuizData(null);
     setShowQuiz(false);
   };
 
-  // Render the home screen or quiz screen based on the app's state
   return (
-    <div className='App'>
+    <div className="App">
       {!showQuiz ? (
-        <Home startQuiz={StartQuiz} />
+        <Home startQuiz={startQuiz} />
       ) : (
         <Quiz 
           category={quizData.category}
           difficulty={quizData.difficulty}
-          name={quizData.name} // Pass name to Quiz
+          name={quizData.name}
           resetQuiz={resetQuiz}
         />
       )}
@@ -44,7 +37,7 @@ function App() {
         <p>Developed by Jose A. Refoyo Ron</p>
       </footer>
     </div>
-  )
-};
+  );
+}
 
 export default App;

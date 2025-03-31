@@ -17,7 +17,7 @@
 
 .score-container p {
     font-size: 1.2rem;
-    color: #dc3545; /* Red color for incorrect answer message */
+    color: #dc3545; 
     margin-bottom: 20px;
 }
 
