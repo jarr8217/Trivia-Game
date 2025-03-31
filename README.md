@@ -17,4 +17,4 @@ This is a Trivia Game application built using React and custom CSS. The app allo
 
 This project helped reinforce best practices in React development and CSS styling.
 
-Live version of the Trivia Game [Netlify](funny-daffodil-0f5af1.netlify.app)
+Live version of the Trivia Game [Netlify](funny-daffodil-0f5af1.netlify.app)**
