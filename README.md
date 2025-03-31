@@ -17,4 +17,4 @@ This is a Trivia Game application built using React and custom CSS. The app allo
 
 This project helped reinforce best practices in React development and CSS styling.
 
-Click link to see live app [TriviaGame](jarrtrivia.netlify.app)
+Click link to see live app [TriviaGame](https://jarrtrivia.netlify.app)
