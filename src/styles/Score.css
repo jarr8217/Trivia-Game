@@ -1,0 +1,37 @@
+.score-container {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.score-container h3 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.score-container p {
+    font-size: 1.2rem;
+    color: #dc3545; /* Red color for incorrect answer message */
+    margin-bottom: 20px;
+}
+
+.score-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.score-container button:hover {
+    background-color: #0056b3;
+}

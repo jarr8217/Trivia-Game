@@ -4,6 +4,8 @@
 import { useState } from 'react';
 import './App.css';
 import Home from './components/Home';
+import Quiz from './components/Quiz';
+import Score from './components/Score';
 
 function App() {
   // State to store the quiz data
@@ -13,8 +15,8 @@ function App() {
   const [showQuiz, setShowQuiz] = useState(false);
 
   // Function to start the quiz with the provided settings
-  const StartQuiz = (data) => {
-    setQuizData(data);
+  const StartQuiz = (name, category, difficulty) => {
+    setQuizData({ name, category, difficulty }); // Store name, category, and difficulty
     setShowQuiz(true);
   };
 
@@ -33,7 +35,7 @@ function App() {
         <Quiz 
           category={quizData.category}
           difficulty={quizData.difficulty}
-          name={quizData.name}
+          name={quizData.name} // Pass name to Quiz
           resetQuiz={resetQuiz}
         />
       )}
