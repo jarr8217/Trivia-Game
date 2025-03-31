@@ -1,12 +1,18 @@
-# React + Vite
+# Trivia Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Trivia Game application built using React and custom CSS. The app allows users to test their knowledge across various categories and difficulty levels. It demonstrates the following concepts:
 
-Currently, two official plugins are available:
+- **Component Composition**: Modular and reusable React components.
+- **Event Handling**: Managing user interactions like form submissions and button clicks.
+- **API Data Fetching**: Fetching trivia questions dynamically from an external API.
+- **State Management**: Using React's `useState` and `useEffect` hooks to manage application state.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- User can input their name, select a category, and choose a difficulty level.
+- Dynamically fetches trivia questions from the Open Trivia Database API.
+- Provides feedback on correct and incorrect answers.
+- Displays the final score at the end of the quiz.
+- Option to restart the quiz.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project helped reinforce best practices in React development and CSS styling.
