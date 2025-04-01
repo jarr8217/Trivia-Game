@@ -20,7 +20,7 @@ This project helped reinforce best practices in React development and CSS stylin
 Click link to see live app [TriviaGame](https://jarrtrivia.netlify.app)
 
 
-## Installation and Running the Project
+## Installation and Running
 
 To set up and run the project locally, follow these steps:
 
