@@ -32,7 +32,7 @@ To set up and run the project locally, follow these steps:
 2. Install dependencies
    npm install/ npm i
 
- 3.Run the project 
+ 3. Run the project 
   npm run dev
 
 4. Access the app
