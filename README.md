@@ -18,3 +18,22 @@ This is a Trivia Game application built using React and custom CSS. The app allo
 This project helped reinforce best practices in React development and CSS styling.
 
 Click link to see live app [TriviaGame](https://jarrtrivia.netlify.app)
+
+
+## Installation and Running the Project
+
+To set up and run the project locally, follow these steps:
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/jarr8217/Trivia-Game.git
+   cd triviagame
+
+2. Install dependencies
+   npm install/ npm i
+
+3.Run the project 
+  npm run dev
+
+4. Access the app
+   ctrl + click on http://localhost:5173
